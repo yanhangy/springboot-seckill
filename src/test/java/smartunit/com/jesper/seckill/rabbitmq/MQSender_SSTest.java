@@ -24,17 +24,6 @@ import org.springframework.amqp.core.AmqpTemplate;
 public class MQSender_SSTest extends MQSender_SSTest_scaffolding {
 
   @Test(timeout = 4000)
-  public void test_sendSeckillMessage_0()  throws Throwable  {
-      MQSender mQSender0 = new MQSender();
-      AmqpTemplate amqpTemplate0 = mock(AmqpTemplate.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-
-      //invoke method for mQSender0
-      PrivateAccess.setVariable((Class<?>) MQSender.class, mQSender0, "amqpTemplate", (Object) amqpTemplate0);
-      SeckillMessage seckillMessage0 = new SeckillMessage();
-      mQSender0.sendSeckillMessage(seckillMessage0);
-      assertEquals(0L, seckillMessage0.getGoodsId());
-  }
-  @Test(timeout = 4000)
   public void test_sendTopic_1()  throws Throwable  {
       MQSender mQSender0 = new MQSender();
       AmqpTemplate amqpTemplate0 = mock(AmqpTemplate.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
