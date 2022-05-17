@@ -112,13 +112,6 @@ public class RedisService_SSTest extends RedisService_SSTest_scaffolding {
       }
   }
   @Test(timeout = 4000)
-  public void test_beanToString_07()  throws Throwable  {
-      RedisService redisService0 = new RedisService();
-      String string0 = RedisService.beanToString((Object) redisService0);
-      assertNotNull(string0);
-      assertEquals("{}", string0);
-  }
-  @Test(timeout = 4000)
   public void test_incr_08()  throws Throwable  {
       RedisService redisService0 = new RedisService();
 
