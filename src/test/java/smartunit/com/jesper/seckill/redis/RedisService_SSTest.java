@@ -103,13 +103,6 @@ public class RedisService_SSTest extends RedisService_SSTest_scaffolding {
       assertEquals("200", string0);
   }
   @Test(timeout = 4000)
-  public void test_beanToString_07()  throws Throwable  {
-      //caseID:35b9c5840a674e24f447ef4d9c4465ee
-      RedisService redisService0 = new RedisService();
-      String string0 = RedisService.beanToString((Object) redisService0);
-      assertEquals("{}", string0);
-  }
-  @Test(timeout = 4000)
   public void test_exists_08()  throws Throwable  {
       //caseID:1049d3ed5895ef9d1ceab3208deba73e
       RedisService redisService0 = new RedisService();
