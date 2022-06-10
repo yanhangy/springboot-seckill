@@ -468,27 +468,6 @@ public class RedisService_SSTest extends RedisService_SSTest_scaffolding {
       assertTrue(boolean0);
   }
   @Test(timeout = 4000)
-  public void test_set_18()  throws Throwable  {
-      //caseID:da43f7ae3bdc6fd1032ca00707ca1132
-      RedisService redisService0 = new RedisService();
-
-      //prepare data for jedisPool0
-      Jedis jedis0 = mock(Jedis.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn("1").when(jedis0).setex(anyString() , anyInt() , anyString());
-      JedisPool jedisPool0 = mock(JedisPool.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn(jedis0).when(jedisPool0).getResource();
-
-      //invoke method for redisService0
-      PrivateAccess.setVariable((Class<?>) RedisService.class, redisService0, "jedisPool", (Object) jedisPool0);
-
-      //prepare data for keyPrefix0
-      KeyPrefix keyPrefix0 = mock(KeyPrefix.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn(29).when(keyPrefix0).expireSeconds();
-      doReturn("1", "1").when(keyPrefix0).getPrefix();
-      Boolean boolean0 = redisService0.set(keyPrefix0, "@kOl|u1c:", (Object) keyPrefix0);
-      assertTrue(boolean0);
-  }
-  @Test(timeout = 4000)
   public void test_set_19()  throws Throwable  {
       //caseID:1b6a1f85049052d3f815595db7a6c6e8
       RedisService redisService0 = new RedisService();
@@ -509,23 +488,4 @@ public class RedisService_SSTest extends RedisService_SSTest_scaffolding {
       Boolean boolean0 = redisService0.set(keyPrefix0, "0", (Object) "0");
       assertTrue(boolean0);
   }
-  @Test(timeout = 4000)
-  public void test_set_20()  throws Throwable  {
-      //caseID:0630658a90dec4406e9e362f1a2c81c4
-      RedisService redisService0 = new RedisService();
-
-      //prepare data for jedisPool0
-      Jedis jedis0 = mock(Jedis.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      JedisPool jedisPool0 = mock(JedisPool.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn(jedis0).when(jedisPool0).getResource();
-
-      //invoke method for redisService0
-      PrivateAccess.setVariable((Class<?>) RedisService.class, redisService0, "jedisPool", (Object) jedisPool0);
-
-      //prepare data for keyPrefix0
-      KeyPrefix keyPrefix0 = mock(KeyPrefix.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn(0).when(keyPrefix0).expireSeconds();
-      doReturn("com.jesper.seckill.redis.RedisService", "T]/7]ssV<").when(keyPrefix0).getPrefix();
-      Boolean boolean0 = redisService0.set(keyPrefix0, "@kOl|u1c:", (Object) keyPrefix0);
-      assertTrue(boolean0);
-  }}
+  }
