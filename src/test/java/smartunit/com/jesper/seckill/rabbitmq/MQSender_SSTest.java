@@ -35,15 +35,4 @@ public class MQSender_SSTest extends MQSender_SSTest_scaffolding {
       //invoke method for mQSender0
       mQSender0.sendSeckillMessage((SeckillMessage) null);
   }
-  @Test(timeout = 4000)
-  public void test_sendTopic_1()  throws Throwable  {
-      //caseID:da1c611b3c2ef561879d47d9c373c77c
-      MQSender mQSender0 = new MQSender();
-      AmqpTemplate amqpTemplate0 = mock(AmqpTemplate.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-
-      //invoke method for mQSender0
-      PrivateAccess.setVariable((Class<?>) MQSender.class, mQSender0, "amqpTemplate", (Object) amqpTemplate0);
-
-      //invoke method for mQSender0
-      mQSender0.sendTopic(mQSender0);
-  }}
+  }
