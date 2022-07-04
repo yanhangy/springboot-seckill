@@ -87,15 +87,6 @@ public class RedisService_SSTest extends RedisService_SSTest_scaffolding {
       assertEquals(0L, (long)long0);
   }
   @Test(timeout = 4000)
-  public void test_stringToBean_06()  throws Throwable  {
-      //caseID:d56d5953d5c846e961f91f5a67d34e05
-      RedisService redisService0 = new RedisService();
-      Class<JPopupMenu> class0 = JPopupMenu.class;
-      JPopupMenu jPopupMenu0 = RedisService.stringToBean("{}", class0);
-      assertNotNull(jPopupMenu0);
-      assertFalse(jPopupMenu0.getFocusTraversalKeysEnabled());
-  }
-  @Test(timeout = 4000)
   public void test_beanToString_07()  throws Throwable  {
       //caseID:2b68ce59a43b4ce1e8a5010a73aa8a9e
       RedisService redisService0 = new RedisService();
@@ -356,23 +347,4 @@ public class RedisService_SSTest extends RedisService_SSTest_scaffolding {
       Boolean boolean0 = redisService0.set(keyPrefix0, "Q", "f,rAdb");
       assertTrue(boolean0);
   }
-  @Test(timeout = 4000)
-  public void test_set_21()  throws Throwable  {
-      //caseID:336f2a162006b910f62dd1a62290fe77
-      RedisService redisService0 = new RedisService();
-
-      //prepare data for jedisPool0
-      Jedis jedis0 = mock(Jedis.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      JedisPool jedisPool0 = mock(JedisPool.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn(jedis0).when(jedisPool0).getResource();
-
-      //invoke method for redisService0
-      PrivateAccess.setVariable((Class<?>) RedisService.class, redisService0, "jedisPool", (Object) jedisPool0);
-
-      //prepare data for keyPrefix0
-      KeyPrefix keyPrefix0 = mock(KeyPrefix.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn(1554).when(keyPrefix0).expireSeconds();
-      doReturn("lifecycleMBeanBase.unregisterFail", "").when(keyPrefix0).getPrefix();
-      Boolean boolean0 = redisService0.set(keyPrefix0, "Username: ", (Object) keyPrefix0);
-      assertTrue(boolean0);
-  }}
+  }
