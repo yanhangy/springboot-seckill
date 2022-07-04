@@ -367,23 +367,4 @@ public class RedisService_SSTest extends RedisService_SSTest_scaffolding {
       Boolean boolean0 = redisService0.set(keyPrefix0, "1.0", (Object) "1");
       assertTrue(boolean0);
   }
-  @Test(timeout = 4000)
-  public void test_set_20()  throws Throwable  {
-      //caseID:7de0761951042d941ec5628db9b72852
-      RedisService redisService0 = new RedisService();
-
-      //prepare data for jedisPool0
-      Jedis jedis0 = mock(Jedis.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      JedisPool jedisPool0 = mock(JedisPool.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn(jedis0).when(jedisPool0).getResource();
-
-      //invoke method for redisService0
-      PrivateAccess.setVariable((Class<?>) RedisService.class, redisService0, "jedisPool", (Object) jedisPool0);
-
-      //prepare data for keyPrefix0
-      KeyPrefix keyPrefix0 = mock(KeyPrefix.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn(1476).when(keyPrefix0).expireSeconds();
-      doReturn("L", "1.0").when(keyPrefix0).getPrefix();
-      Boolean boolean0 = redisService0.set(keyPrefix0, "", (Object) keyPrefix0);
-      assertTrue(boolean0);
-  }}
+  }
