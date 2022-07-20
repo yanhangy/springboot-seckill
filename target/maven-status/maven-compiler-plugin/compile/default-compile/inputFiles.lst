@@ -1,5 +1,5 @@
-/home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/redis/OrderKey.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/limit/RateLimiterDemo.java
+/home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/redis/OrderKey.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/vo/GoodsDetailVo.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/redis/RedisConfig.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/mapper/GoodsMapper.java
@@ -14,8 +14,8 @@
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/service/SeckillService.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/service/GoodsService.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/config/WebConfig.java
-/home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/result/CodeMsg.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/service/UserService.java
+/home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/result/CodeMsg.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/validator/IsMobile.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/rabbitmq/MQSender.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/redis/BasePrefix.java
@@ -28,8 +28,8 @@
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/service/OrderService.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/config/UserArgumentResolver.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/exception/GlobalExceptionHandler.java
-/home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/mapper/UserMapper.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/rabbitmq/SeckillMessage.java
+/home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/mapper/UserMapper.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/controller/GoodsController.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/controller/DemoController.java
 /home/smartunit/codeWorkspace/src/main/java/com/jesper/seckill/util/DBUtil.java
