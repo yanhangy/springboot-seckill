@@ -7,18 +7,12 @@ package smartunit.com.jesper.seckill.config;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import java.lang.reflect.Method;
-import static org.smartunit.shaded.org.mockito.Mockito.*;
-import org.smartunit.shaded.org.mockito.ArgumentMatchers;
-import com.jesper.seckill.config.UserArgumentResolver;
 import com.jesper.seckill.config.WebConfig;
-import groovy.lang.NonEmptySequence;
+import java.util.Stack;
 import org.junit.runner.RunWith;
-import org.smartunit.runtime.ExecutorServiceAnswer;
-import org.smartunit.runtime.PrivateAccess;
 import org.smartunit.runtime.SmartRunner;
 import org.smartunit.runtime.SmartRunnerParameters;
-import org.smartunit.runtime.TransactionTemplateAnswer;
-import org.smartunit.runtime.ViolatedAssumptionAnswer;
+import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 
 @RunWith(SmartRunner.class) @SmartRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
 public class WebConfig_SSTest extends WebConfig_SSTest_scaffolding {
