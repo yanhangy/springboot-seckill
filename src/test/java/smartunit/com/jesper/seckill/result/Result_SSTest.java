@@ -94,23 +94,4 @@ public class Result_SSTest extends Result_SSTest_scaffolding {
       String string0 = result0.getMsg();
       assertNull(string0);
   }
-  @Test(timeout = 4000)
-  public void test_setData_5()  throws Throwable  {
-      //caseID:6fc10bf69b4c02d7c5ec305dbfedf1c3
-
-      //prepare data for codeMsg0
-      CodeMsg codeMsg0 = mock(CodeMsg.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn((-1)).when(codeMsg0).getCode();
-      doReturn("nJEZXo9GA6[Ky").when(codeMsg0).getMsg();
-      Result<Integer> result0 = Result.error(codeMsg0);
-
-      //invoke method for result1
-      result1.getData();
-      Integer integer0 = new Integer(0);
-
-      //invoke method for result0
-      result0.setData(integer0);
-
-      //invoke method for result0
-      assertEquals((-1), result0.getCode());
-  }}
+}
