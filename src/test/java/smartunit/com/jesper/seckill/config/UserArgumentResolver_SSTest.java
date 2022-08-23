@@ -14,7 +14,9 @@ import com.jesper.seckill.config.UserArgumentResolver;
 import com.jesper.seckill.service.UserService;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponseWrapper;
 import org.junit.runner.RunWith;
 import org.smartunit.runtime.ExecutorServiceAnswer;
 import org.smartunit.runtime.PrivateAccess;
@@ -117,7 +119,7 @@ public class UserArgumentResolver_SSTest extends UserArgumentResolver_SSTest_sca
 
       //prepare data for nativeWebRequest0
       HttpServletResponse httpServletResponse0 = mock(HttpServletResponse.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      Cookie[] cookieArray0 = new Cookie[5];
+      Cookie[] cookieArray0 = new Cookie[3];
       Cookie cookie0 = mock(Cookie.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       doReturn("-1790372459", "Ew&:}f+").when(cookie0).getName();
       cookieArray0[0] = cookie0;
@@ -158,8 +160,9 @@ public class UserArgumentResolver_SSTest extends UserArgumentResolver_SSTest_sca
       doReturn("token").when(cookie0).getName();
       doReturn("-1910796622").when(cookie0).getValue();
       cookieArray0[0] = cookie0;
+      cookieArray0[1] = cookieArray0[0];
       HttpServletRequest httpServletRequest0 = mock(HttpServletRequest.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn("").when(httpServletRequest0).getParameter(anyString());
+      doReturn("java.library.path").when(httpServletRequest0).getParameter(anyString());
       doReturn(cookieArray0).when(httpServletRequest0).getCookies();
       NativeWebRequest nativeWebRequest0 = mock(NativeWebRequest.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       doReturn(httpServletRequest0).when(nativeWebRequest0).getNativeRequest(any(java.lang.Class.class));
@@ -191,8 +194,12 @@ public class UserArgumentResolver_SSTest extends UserArgumentResolver_SSTest_sca
       doReturn("token").when(cookie0).getName();
       doReturn("-1910796622").when(cookie0).getValue();
       cookieArray0[0] = cookie0;
+      Cookie cookie1 = mock(Cookie.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
+      doReturn("token").when(cookie1).getName();
+      doReturn("token").when(cookie1).getValue();
+      cookieArray0[1] = cookie1;
       HttpServletRequest httpServletRequest0 = mock(HttpServletRequest.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn("token").when(httpServletRequest0).getParameter(anyString());
+      doReturn("1").when(httpServletRequest0).getParameter(anyString());
       doReturn(cookieArray0).when(httpServletRequest0).getCookies();
       NativeWebRequest nativeWebRequest0 = mock(NativeWebRequest.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       doReturn(httpServletRequest0).when(nativeWebRequest0).getNativeRequest(any(java.lang.Class.class));

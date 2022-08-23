@@ -87,8 +87,8 @@ public class Result_SSTest extends Result_SSTest_scaffolding {
 
       //prepare data for codeMsg0
       CodeMsg codeMsg0 = mock(CodeMsg.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn(0).when(codeMsg0).getCode();
-      doReturn("").when(codeMsg0).getMsg();
+      doReturn(4489).when(codeMsg0).getCode();
+      doReturn("dD]Yh,Y`/Q_)3I'L;b").when(codeMsg0).getMsg();
       Result<Object> result1 = Result.error(codeMsg0);
 
       //invoke method for result1
