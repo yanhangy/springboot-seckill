@@ -53,10 +53,10 @@ public class CodeMsg_SSTest extends CodeMsg_SSTest_scaffolding {
       CodeMsg codeMsg0 = CodeMsg.ACCESS_LIMIT_REACHED;
 
       //invoke method for codeMsg0
-      codeMsg0.setCode(0);
+      codeMsg0.setMsg("1");
 
       //invoke method for codeMsg0
-      assertEquals(0, codeMsg0.getCode());
+      assertEquals(500211, codeMsg0.getCode());
   }
   @Test(timeout = 4000)
   public void test_fillArgs_5()  throws Throwable  {

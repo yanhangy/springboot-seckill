@@ -103,7 +103,6 @@ public class Result_SSTest extends Result_SSTest_scaffolding {
       doReturn((-1)).when(codeMsg0).getCode();
       doReturn("nJEZXo9GA6[Ky").when(codeMsg0).getMsg();
       Result<Integer> result0 = Result.error(codeMsg0);
-      Result<String> result1 = Result.success("");
 
       //invoke method for result1
       result1.getData();
