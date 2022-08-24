@@ -2,9 +2,7 @@ smartunit/com/jesper/seckill/config/UserArgumentResolver_SSTest_scaffolding.clas
 smartunit/com/jesper/seckill/result/CodeMsg_SSTest.class
 smartunit/com/jesper/seckill/result/Result_SSTest.class
 smartunit/com/jesper/seckill/result/Result_SSTest_scaffolding.class
-smartunit/com/jesper/seckill/config/WebConfig_SSTest.class
 smartunit/com/jesper/seckill/config/UserArgumentResolver_SSTest.class
 smartunit/com/jesper/seckill/MainApplication_SSTest.class
 smartunit/com/jesper/seckill/MainApplication_SSTest_scaffolding.class
 smartunit/com/jesper/seckill/result/CodeMsg_SSTest_scaffolding.class
-smartunit/com/jesper/seckill/config/WebConfig_SSTest_scaffolding.class
