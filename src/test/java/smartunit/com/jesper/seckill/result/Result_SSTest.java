@@ -98,13 +98,12 @@ public class Result_SSTest extends Result_SSTest_scaffolding {
       doReturn("").when(codeMsg0).getMsg();
       Result<String> result0 = Result.error(codeMsg0);
 
-      //invoke method for result0
-      result0.getData();
-      Result.success((Object) null);
+      //invoke method for result1
+      result1.getData();
 
       //invoke method for result0
       result0.setCode(1);
 
       //invoke method for result0
-      assertEquals(1, result0.getCode());
+      assertEquals((-1), result0.getCode());
   }}

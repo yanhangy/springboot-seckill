@@ -13,6 +13,7 @@ import org.junit.AfterClass;
 import org.smartunit.runtime.sandbox.Sandbox;
 import org.smartunit.runtime.sandbox.Sandbox.SandboxMode;
 
+import static org.smartunit.shaded.org.mockito.Mockito.*;
 @SmartSuiteClassExclude
 public class WebConfig_SSTest_scaffolding {
 
@@ -37,6 +38,7 @@ public class WebConfig_SSTest_scaffolding {
     setSystemProperties();
     initializeClasses();
     org.smartunit.runtime.Runtime.getInstance().resetRuntime(); 
+    try { initMocksToAvoidTimeoutsInTheTests(); } catch(ClassNotFoundException e) {} 
   } 
 
   @AfterClass 
@@ -73,6 +75,9 @@ public class WebConfig_SSTest_scaffolding {
  
     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+  }
+  private static void initMocksToAvoidTimeoutsInTheTests() throws ClassNotFoundException { 
+    mock(Class.forName("com.jesper.seckill.config.UserArgumentResolver", false, WebConfig_SSTest_scaffolding.class.getClassLoader()), withSettings().stubOnly());
   }
 
   private static void initializeClasses() {
