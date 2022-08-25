@@ -156,6 +156,7 @@ public class UserArgumentResolver_SSTest extends UserArgumentResolver_SSTest_sca
       doReturn("token").when(cookie0).getName();
       doReturn("M2tK").when(cookie0).getValue();
       cookieArray0[0] = cookie0;
+      cookieArray0[1] = cookieArray0[0];
       HttpServletRequest httpServletRequest0 = mock(HttpServletRequest.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       doReturn("pps").when(httpServletRequest0).getParameter(anyString());
       doReturn(cookieArray0).when(httpServletRequest0).getCookies();
@@ -186,9 +187,12 @@ public class UserArgumentResolver_SSTest extends UserArgumentResolver_SSTest_sca
       HttpServletResponse httpServletResponse0 = mock(HttpServletResponse.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       Cookie[] cookieArray0 = new Cookie[3];
       Cookie cookie0 = mock(Cookie.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn("token").when(cookie0).getName();
-      doReturn("token").when(cookie0).getValue();
+      doReturn("0").when(cookie0).getName();
       cookieArray0[0] = cookie0;
+      Cookie cookie1 = mock(Cookie.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
+      doReturn("token").when(cookie1).getName();
+      doReturn(", @@init_connect AS init_connect").when(cookie1).getValue();
+      cookieArray0[1] = cookie1;
       HttpServletRequest httpServletRequest0 = mock(HttpServletRequest.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       doReturn("").when(httpServletRequest0).getParameter(anyString());
       doReturn(cookieArray0).when(httpServletRequest0).getCookies();

@@ -8,7 +8,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import java.lang.reflect.Method;
 import com.jesper.seckill.config.WebConfig;
-import java.util.LinkedList;
+import java.util.Stack;
 import org.junit.runner.RunWith;
 import org.smartunit.runtime.SmartRunner;
 import org.smartunit.runtime.SmartRunnerParameters;
@@ -21,7 +21,7 @@ public class WebConfig_SSTest extends WebConfig_SSTest_scaffolding {
   public void test_addArgumentResolvers_0()  throws Throwable  {
       //caseID:3bc8d2270b3a935ff842af7952bda37c
       WebConfig webConfig0 = new WebConfig();
-      LinkedList<HandlerMethodArgumentResolver> linkedList0 = new LinkedList<HandlerMethodArgumentResolver>();
-      webConfig0.addArgumentResolvers(linkedList0);
-      assertEquals(1, linkedList0.size());
+      Stack<HandlerMethodArgumentResolver> stack0 = new Stack<HandlerMethodArgumentResolver>();
+      webConfig0.addArgumentResolvers(stack0);
+      assertFalse(stack0.isEmpty());
   }}

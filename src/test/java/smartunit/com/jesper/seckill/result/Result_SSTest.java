@@ -42,7 +42,7 @@ public class Result_SSTest extends Result_SSTest_scaffolding {
       result0.setData("vmfhaA[{0le/l");
 
       //invoke method for result0
-      assertEquals(0, result0.getCode());
+      assertEquals("", result0.getMsg());
   }
   @Test(timeout = 4000)
   public void test_setCode_2()  throws Throwable  {
