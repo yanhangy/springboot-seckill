@@ -42,10 +42,10 @@ public class CodeMsg_SSTest extends CodeMsg_SSTest_scaffolding {
       CodeMsg codeMsg0 = CodeMsg.MOBILE_ERROR;
 
       //invoke method for codeMsg0
-      codeMsg0.setCode(500500);
+      codeMsg0.setMsg("SnN9R");
 
       //invoke method for codeMsg0
-      assertEquals(500500, codeMsg0.getCode());
+      assertEquals(500216, codeMsg0.getCode());
   }
   @Test(timeout = 4000)
   public void test_setMsg_4()  throws Throwable  {

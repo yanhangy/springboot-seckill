@@ -31,7 +31,7 @@ public class Result_SSTest extends Result_SSTest_scaffolding {
       result0.setMsg("\u4E3B\u952E\u51B2\u7A81");
 
       //invoke method for result0
-      assertEquals(0, result0.getCode());
+      assertEquals("", result0.getMsg());
   }
   @Test(timeout = 4000)
   public void test_setData_1()  throws Throwable  {
@@ -96,7 +96,7 @@ public class Result_SSTest extends Result_SSTest_scaffolding {
       assertEquals(500501, result1.getCode());
       
       int int0 = result0.getCode();
-      assertEquals(0, int0);
+      assertEquals(500400, int0);
   }
   @Test(timeout = 4000)
   public void test_getMsg_5()  throws Throwable  {
