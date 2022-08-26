@@ -131,7 +131,7 @@ public class UserArgumentResolver_SSTest extends UserArgumentResolver_SSTest_sca
       cookieArray0[7] = cookieArray0[0];
       cookieArray0[8] = cookieArray0[5];
       HttpServletRequest httpServletRequest0 = mock(HttpServletRequest.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn("1").when(httpServletRequest0).getParameter(anyString());
+      doReturn("org.springframework.beans.TypeMismatchException").when(httpServletRequest0).getParameter(anyString());
       doReturn(cookieArray0).when(httpServletRequest0).getCookies();
       NativeWebRequest nativeWebRequest0 = mock(NativeWebRequest.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       doReturn(httpServletRequest0).when(nativeWebRequest0).getNativeRequest(any(java.lang.Class.class));
