@@ -16,8 +16,8 @@ com/jesper/seckill/bean/SeckillOrder.class
 com/jesper/seckill/bean/SeckillGoods.class
 com/jesper/seckill/exception/GlobalException.class
 com/jesper/seckill/redis/RedisService.class
-com/jesper/seckill/controller/LoginController.class
 com/jesper/seckill/vo/GoodsVo.class
+com/jesper/seckill/controller/LoginController.class
 com/jesper/seckill/vo/OrderDetailVo.class
 com/jesper/seckill/mapper/GoodsMapper.class
 com/jesper/seckill/rabbitmq/MQConfig.class
@@ -37,13 +37,13 @@ com/jesper/seckill/MainApplication.class
 com/jesper/seckill/bean/OrderInfo.class
 com/jesper/seckill/limit/RateLimiterDemo.class
 com/jesper/seckill/controller/UserController.class
-com/jesper/seckill/service/GoodsService.class
 com/jesper/seckill/validator/IsMobileValidator.class
+com/jesper/seckill/service/GoodsService.class
 com/jesper/seckill/service/UserService.class
 com/jesper/seckill/util/ValidatorUtil.class
 com/jesper/seckill/vo/GoodsDetailVo.class
-com/jesper/seckill/limit/RateLimiterDemo$UserRequest.class
 com/jesper/seckill/util/UserUtil.class
+com/jesper/seckill/limit/RateLimiterDemo$UserRequest.class
 com/jesper/seckill/util/UUIDUtil.class
 com/jesper/seckill/util/MD5Util.class
 com/jesper/seckill/config/UserArgumentResolver.class
