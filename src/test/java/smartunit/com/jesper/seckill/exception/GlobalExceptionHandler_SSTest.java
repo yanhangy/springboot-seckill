@@ -57,7 +57,7 @@ public class GlobalExceptionHandler_SSTest extends GlobalExceptionHandler_SSTest
       //CoveredLines: [21, 25, 26, 29, 36]
       //Input_0_HttpServletRequest: {}
       //Input_1_Exception: {}
-      //Assert: assertEquals("\u670D\u52A1\u7AEF\u5F02\u5E38", method_result.getMsg());
+      //Assert: assertEquals(500100, method_result.getCode());
       
       GlobalExceptionHandler globalExceptionHandler0 = new GlobalExceptionHandler();
       //mock httpServletRequest0
@@ -69,7 +69,7 @@ public class GlobalExceptionHandler_SSTest extends GlobalExceptionHandler_SSTest
       Result<String> result0 = globalExceptionHandler0.exceptionHandler(httpServletRequest0, exception0);
       
       //Test Result Assert
-      assertEquals("\u670D\u52A1\u7AEF\u5F02\u5E38", result0.getMsg());
+      assertEquals(500100, result0.getCode());
   }
 
   @Test(timeout = 4000)
