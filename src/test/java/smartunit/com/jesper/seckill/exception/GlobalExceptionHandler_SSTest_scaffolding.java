@@ -81,8 +81,6 @@ public class GlobalExceptionHandler_SSTest_scaffolding {
     mock(Class.forName("com.jesper.seckill.result.CodeMsg", false, GlobalExceptionHandler_SSTest_scaffolding.class.getClassLoader()), withSettings().stubOnly());
     mock(Class.forName("java.lang.Exception", false, GlobalExceptionHandler_SSTest_scaffolding.class.getClassLoader()), withSettings().stubOnly());
     mock(Class.forName("javax.servlet.http.HttpServletRequest", false, GlobalExceptionHandler_SSTest_scaffolding.class.getClassLoader()), withSettings().stubOnly());
-    mock(Class.forName("org.springframework.validation.BindingResult", false, GlobalExceptionHandler_SSTest_scaffolding.class.getClassLoader()), withSettings().stubOnly());
-    mock(Class.forName("org.springframework.validation.ObjectError", false, GlobalExceptionHandler_SSTest_scaffolding.class.getClassLoader()), withSettings().stubOnly());
   }
 
   private static void initializeClasses() {

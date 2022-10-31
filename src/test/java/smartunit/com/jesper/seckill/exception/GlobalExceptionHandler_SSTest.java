@@ -13,7 +13,6 @@ import com.jesper.seckill.exception.GlobalException;
 import com.jesper.seckill.exception.GlobalExceptionHandler;
 import com.jesper.seckill.result.CodeMsg;
 import com.jesper.seckill.result.Result;
-import java.util.LinkedList;
 import javax.servlet.http.HttpServletRequest;
 import org.junit.runner.RunWith;
 import org.smartunit.runtime.ExecutorServiceAnswer;
@@ -22,8 +21,6 @@ import org.smartunit.runtime.SmartRunnerParameters;
 import org.smartunit.runtime.TransactionTemplateAnswer;
 import org.smartunit.runtime.ViolatedAssumptionAnswer;
 import org.springframework.validation.BindException;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 
 @RunWith(SmartRunner.class) @SmartRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true) 
 public class GlobalExceptionHandler_SSTest extends GlobalExceptionHandler_SSTest_scaffolding {
@@ -31,11 +28,11 @@ public class GlobalExceptionHandler_SSTest extends GlobalExceptionHandler_SSTest
 
   @Test(timeout = 4000)
   public void test_exceptionHandler_0()  throws Throwable  {
-      //caseID:bf43b3f32e6435aa5944f7fb0542cc44
+      //caseID:6eb7f4648227bbbd5b8f40a0a60a8144
       //CoveredLines: [21, 25, 26, 27, 28]
       //Input_0_HttpServletRequest: {}
       //Input_1_Exception: codeMsg0
-      //Assert: assertNull(method_result.getMsg());
+      //Assert: assertEquals(0, method_result.getCode());
       
       GlobalExceptionHandler globalExceptionHandler0 = new GlobalExceptionHandler();
       //mock httpServletRequest0
@@ -48,12 +45,12 @@ public class GlobalExceptionHandler_SSTest extends GlobalExceptionHandler_SSTest
       Result<String> result0 = globalExceptionHandler0.exceptionHandler(httpServletRequest0, globalException0);
       
       //Test Result Assert
-      assertNull(result0.getMsg());
+      assertEquals(0, result0.getCode());
   }
 
   @Test(timeout = 4000)
   public void test_exceptionHandler_1()  throws Throwable  {
-      //caseID:9fe9046f4016aa0f64fb6f653c13c50a
+      //caseID:f91bec33e5413b1886bbe44466225fd2
       //CoveredLines: [21, 25, 26, 29, 36]
       //Input_0_HttpServletRequest: {}
       //Input_1_Exception: {}
@@ -74,28 +71,22 @@ public class GlobalExceptionHandler_SSTest extends GlobalExceptionHandler_SSTest
 
   @Test(timeout = 4000)
   public void test_exceptionHandler_2()  throws Throwable  {
-      //caseID:677f5a0b1a6aeee70da130e9d2383460
+      //caseID:f1d205e0b474b4bbdaa16d8a0a254c03
       //CoveredLines: [21, 25, 26, 29, 30, 31, 32, 33, 34]
       //Input_0_HttpServletRequest: {}
-      //Input_1_Exception: bindingResult0
-      //Assert: assertEquals(500101, method_result.getCode());
+      //Input_1_Exception: httpServletRequest0, "$$"
+      //Assert: assertEquals("\u53C2\u6570\u6821\u9A8C\u5F02\u5E38\uFF1Anull", method_result.getMsg());
       
       GlobalExceptionHandler globalExceptionHandler0 = new GlobalExceptionHandler();
       //mock httpServletRequest0
       HttpServletRequest httpServletRequest0 = mock(HttpServletRequest.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      LinkedList<ObjectError> linkedList0 = new LinkedList<ObjectError>();
-      //mock objectError0
-      ObjectError objectError0 = mock(ObjectError.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      linkedList0.add(objectError0);
-      //mock bindingResult0
-      BindingResult bindingResult0 = mock(BindingResult.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn(linkedList0).when(bindingResult0).getAllErrors();
-      BindException bindException0 = new BindException(bindingResult0);
+      BindException bindException0 = new BindException(httpServletRequest0, "$$");
+      bindException0.reject("$$");
       
       //Call method: exceptionHandler
       Result<String> result0 = globalExceptionHandler0.exceptionHandler(httpServletRequest0, bindException0);
       
       //Test Result Assert
-      assertEquals(500101, result0.getCode());
+      assertEquals("\u53C2\u6570\u6821\u9A8C\u5F02\u5E38\uFF1Anull", result0.getMsg());
   }
 }

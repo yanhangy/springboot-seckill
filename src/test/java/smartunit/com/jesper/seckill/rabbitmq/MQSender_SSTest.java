@@ -26,7 +26,7 @@ public class MQSender_SSTest extends MQSender_SSTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test_sendSeckillMessage_0()  throws Throwable  {
-      //caseID:23be9537cb1ff7eecd5712c40e4cd128
+      //caseID:8a2c8883e4198ed84f1fa53b1fea1015
       //CoveredLines: [14, 35, 36, 37, 39]
       //Input_0_SeckillMessage: null
       
@@ -41,16 +41,17 @@ public class MQSender_SSTest extends MQSender_SSTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test_sendTopic_1()  throws Throwable  {
-      //caseID:ef44c47e602b466749b89b4ab88809a5
+      //caseID:f04f7f23b1b5e76d2c830ae825d5bc83
       //CoveredLines: [14, 28, 29, 30, 31, 32]
-      //Input_0_Object: "topic.key2"
+      //Input_0_Object: object0
       
       MQSender mQSender0 = new MQSender();
       //mock amqpTemplate0
       AmqpTemplate amqpTemplate0 = mock(AmqpTemplate.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       PrivateAccess.setVariable((Class<?>) MQSender.class, mQSender0, "amqpTemplate", (Object) amqpTemplate0);
+      Object object0 = new Object();
       
       //Call method: sendTopic
-      mQSender0.sendTopic("topic.key2");
+      mQSender0.sendTopic(object0);
   }
 }

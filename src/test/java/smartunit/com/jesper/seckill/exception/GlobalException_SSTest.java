@@ -24,9 +24,9 @@ public class GlobalException_SSTest extends GlobalException_SSTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test_getCodeMsg_0()  throws Throwable  {
-      //caseID:ebdf89f72278cb0b4f514bdc1159f56f
+      //caseID:525250a9e6e82d9c4e08d6446779eb0c
       //CoveredLines: [17, 18, 19, 22]
-      //Assert: assertNull(method_result.getMsg());
+      //Assert: assertSame(method_result, codeMsg0);
       
       //mock codeMsg0
       CodeMsg codeMsg0 = mock(CodeMsg.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
@@ -36,6 +36,6 @@ public class GlobalException_SSTest extends GlobalException_SSTest_scaffolding {
       CodeMsg codeMsg1 = globalException0.getCodeMsg();
       
       //Test Result Assert
-      assertNull(codeMsg1.getMsg());
+      assertSame(codeMsg1, codeMsg0);
   }
 }

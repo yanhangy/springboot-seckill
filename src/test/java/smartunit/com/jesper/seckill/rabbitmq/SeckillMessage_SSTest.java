@@ -24,7 +24,7 @@ public class SeckillMessage_SSTest extends SeckillMessage_SSTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test_getGoodsId_0()  throws Throwable  {
-      //caseID:0b1bdcaa6522528b9028536081382fd7
+      //caseID:82c0b0bfb863e789789406cca9d3adc4
       //CoveredLines: [10, 24]
       //Assert: assertEquals(0L, method_result);
       
@@ -39,7 +39,7 @@ public class SeckillMessage_SSTest extends SeckillMessage_SSTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test_getUser_1()  throws Throwable  {
-      //caseID:7f9a3537f39fdcd0c5408f1f2901abc0
+      //caseID:b96ad120bffb27d443eefdfaec8581dd
       //CoveredLines: [10, 16]
       //Assert: assertNull(method_result);
       
@@ -54,7 +54,7 @@ public class SeckillMessage_SSTest extends SeckillMessage_SSTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test_setGoodsId_2()  throws Throwable  {
-      //caseID:fb7d64c59a6d8220ab568c4d1492fe0b
+      //caseID:c816d9e4ff896589792f8c507792f545
       //CoveredLines: [10, 28, 29]
       //Input_0_long: 0L
       
@@ -69,7 +69,7 @@ public class SeckillMessage_SSTest extends SeckillMessage_SSTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test_setUser_3()  throws Throwable  {
-      //caseID:7ade02f9a9d8475b70da7d43721ba563
+      //caseID:3f2f8b7d4e55a1ef0ed035ee76f9dc7e
       //CoveredLines: [10, 20, 21]
       //Input_0_User: {}
       
