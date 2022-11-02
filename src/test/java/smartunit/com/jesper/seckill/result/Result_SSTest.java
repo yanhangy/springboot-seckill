@@ -32,11 +32,11 @@ public class Result_SSTest extends Result_SSTest_scaffolding {
       CodeMsg codeMsg0 = mock(CodeMsg.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       Result<String> result0 = Result.error(codeMsg0);
       
-      //Call method: getCode
-      int int0 = result0.getCode();
+      //Call method: error
+      Result<Object> result0 = Result.error(codeMsg0);
       
       //Test Result Assert
-      assertEquals(0, int0);
+      assertEquals(0, result0.getCode());
   }
 
   @Test(timeout = 4000)
@@ -83,6 +83,21 @@ public class Result_SSTest extends Result_SSTest_scaffolding {
       doReturn(1).when(codeMsg0).getCode();
       doReturn("").when(codeMsg0).getMsg();
       Result<Object> result0 = Result.error(codeMsg0);
+      
+      //Call method: getData
+      result0.getData();
+      
+      //Test Result Assert
+      assertEquals(1, result0.getCode());
+  }
+
+  @Test(timeout = 4000)
+  public void test_getMsg_4()  throws Throwable  {
+      //caseID:cf6ec449fadcf88ce600bfe6388d94a9
+      //CoveredLines: [13, 23, 24, 25, 47]
+      //Assert: assertNull(method_result);
+      
+      Result<String> result0 = Result.success("1");
       
       //Call method: getMsg
       String string0 = result0.getMsg();
