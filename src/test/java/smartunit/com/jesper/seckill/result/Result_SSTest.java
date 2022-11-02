@@ -23,23 +23,6 @@ public class Result_SSTest extends Result_SSTest_scaffolding {
 // allCoveredLines:[13, 20, 23, 24, 25, 32, 33, 34, 35, 37, 41, 44, 45, 47, 50, 51, 53, 56, 57]
 
   @Test(timeout = 4000)
-  public void test_getCode_0()  throws Throwable  {
-      //caseID:a7124c8b78dd5a08627b281bd4e57ccd
-      //CoveredLines: [20, 32, 33, 34, 35, 37, 41]
-      //Assert: assertEquals(0, method_result);
-      
-      //mock codeMsg0
-      CodeMsg codeMsg0 = mock(CodeMsg.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      Result<String> result0 = Result.error(codeMsg0);
-      
-      //Call method: error
-      Result<Object> result0 = Result.error(codeMsg0);
-      
-      //Test Result Assert
-      assertEquals(0, result0.getCode());
-  }
-
-  @Test(timeout = 4000)
   public void test_getData_1()  throws Throwable  {
       //caseID:d7f5f6f3bbde0faafd44bb767e409f70
       //CoveredLines: [20, 32, 33, 37, 53]
