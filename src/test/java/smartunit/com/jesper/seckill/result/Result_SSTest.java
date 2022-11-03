@@ -23,100 +23,113 @@ public class Result_SSTest extends Result_SSTest_scaffolding {
 // allCoveredLines:[13, 20, 23, 24, 25, 32, 33, 34, 35, 37, 41, 44, 45, 47, 50, 51, 53, 56, 57]
 
   @Test(timeout = 4000)
-  public void test_getData_1()  throws Throwable  {
-      //caseID:d7f5f6f3bbde0faafd44bb767e409f70
-      //CoveredLines: [20, 32, 33, 37, 53]
-      //Assert: assertNull(method_result);
+  public void test_getCode_0()  throws Throwable  {
+      //caseID:110aabb204f633efd205a5c94ee07604
+      //CoveredLines: [20, 32, 33, 34, 35, 37, 41]
+      //Assert: assertEquals(0, method_result);
       
-      Result<Object> result0 = Result.error((CodeMsg) null);
+      //mock codeMsg0
+      CodeMsg codeMsg0 = mock(CodeMsg.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
+      Result<Object> result0 = Result.error(codeMsg0);
       
-      //Call method: getData
-      Object object0 = result0.getData();
+      //Call method: getCode
+      int int0 = result0.getCode();
       
       //Test Result Assert
-      assertNull(object0);
+      assertEquals(0, int0);
   }
 
   @Test(timeout = 4000)
-  public void test_getData_2()  throws Throwable  {
-      //caseID:339d08d88ade0546695bec49125df462
+  public void test_getData_1()  throws Throwable  {
+      //caseID:94904ad52662ed4024937d6766932951
       //CoveredLines: [20, 32, 33, 34, 35, 37, 53]
       //Assert: assertNull(method_result);
       
       //mock codeMsg0
       CodeMsg codeMsg0 = mock(CodeMsg.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      Result<Object> result0 = Result.error(codeMsg0);
+      Result<String> result0 = Result.error(codeMsg0);
       
       //Call method: getData
-      Object object0 = result0.getData();
+      String string0 = result0.getData();
       
       //Test Result Assert
-      assertNull(object0);
+      assertNull(string0);
   }
 
   @Test(timeout = 4000)
-  public void test_getMsg_3()  throws Throwable  {
-      //caseID:ad980a27c06cb80ce383cb11098a635d
+  public void test_getMsg_2()  throws Throwable  {
+      //caseID:b301691d76017be54b26d5d3cbfc1569
       //CoveredLines: [20, 32, 33, 34, 35, 37, 47]
-      //Assert: assertNotNull(method_result);
-      //Assert: assertEquals(1, result0.getCode());
+      //Assert: assertNull(method_result);
       
       //mock codeMsg0
       CodeMsg codeMsg0 = mock(CodeMsg.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn(1).when(codeMsg0).getCode();
-      doReturn("").when(codeMsg0).getMsg();
-      Result<Object> result0 = Result.error(codeMsg0);
-      
-      //Call method: getData
-      result0.getData();
-      
-      //Test Result Assert
-      assertEquals(1, result0.getCode());
-  }
-
-  @Test(timeout = 4000)
-  public void test_getMsg_4()  throws Throwable  {
-      //caseID:cf6ec449fadcf88ce600bfe6388d94a9
-      //CoveredLines: [13, 23, 24, 25, 47]
-      //Assert: assertNull(method_result);
-      
-      Result<String> result0 = Result.success("1");
+      Result<String> result0 = Result.error(codeMsg0);
       
       //Call method: getMsg
       String string0 = result0.getMsg();
       
       //Test Result Assert
-      assertNotNull(string0);
+      assertNull(string0);
+  }
+
+  @Test(timeout = 4000)
+  public void test_setCode_3()  throws Throwable  {
+      //caseID:3034c82cf3df58b83ad0af1345c9d45b
+      //CoveredLines: [13, 23, 24, 25, 44, 45]
+      //Input_0_int: 0
+      
+      Result<String> result0 = Result.success("com.jesper.seckill.result.Result");
+      
+      //Call method: setCode
+      result0.setCode(0);
       
       //Test Result Assert
-      assertEquals(1, result0.getCode());
+      assertEquals(0, result0.getCode());
   }
 
   @Test(timeout = 4000)
   public void test_setCode_4()  throws Throwable  {
-      //caseID:1d66eb607013163f7ebf881baa128575
+      //caseID:1e99d20b45edb23f4a0023f634953e89
       //CoveredLines: [20, 32, 33, 34, 35, 37, 44, 45]
-      //Input_0_int: 500212
+      //Input_0_int: 
       
       //mock codeMsg0
       CodeMsg codeMsg0 = mock(CodeMsg.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      Result<Integer> result0 = Result.error(codeMsg0);
+      Result<String> result0 = Result.error(codeMsg0);
       
       //Call method: setCode
-      result0.setCode(500212);
+      result0.setCode((-1));
       
       //Test Result Assert
-      assertEquals(500212, result0.getCode());
+      assertEquals((-1), result0.getCode());
   }
 
   @Test(timeout = 4000)
   public void test_setData_5()  throws Throwable  {
-      //caseID:483ffe481a81a238e29b00c208febbee
-      //CoveredLines: [13, 23, 24, 25, 56, 57]
+      //caseID:133a55ec85d8b8c8740e8fb678b78d3c
+      //CoveredLines: [20, 32, 33, 37, 56, 57]
+      //Input_0_Object: "1"
+      
+      Result<Object> result0 = Result.error((CodeMsg) null);
+      
+      //Call method: setData
+      result0.setData("1");
+      
+      //Test Result Assert
+      assertNull(result0.getMsg());
+  }
+
+  @Test(timeout = 4000)
+  public void test_setData_6()  throws Throwable  {
+      //caseID:e4a3fa8a77c5dfbe8d5a112999bf5fef
+      //CoveredLines: [20, 32, 33, 34, 35, 37, 56, 57]
       //Input_0_Object: object0
       
+      //mock codeMsg0
+      CodeMsg codeMsg0 = mock(CodeMsg.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
+      Result<Object> result0 = Result.error(codeMsg0);
       Object object0 = new Object();
-      Result<Object> result0 = Result.success(object0);
       
       //Call method: setData
       result0.setData(object0);
@@ -126,17 +139,16 @@ public class Result_SSTest extends Result_SSTest_scaffolding {
   }
 
   @Test(timeout = 4000)
-  public void test_setMsg_6()  throws Throwable  {
-      //caseID:1cf1685737316f6925461bd7ef20e675
-      //CoveredLines: [20, 32, 33, 34, 35, 37, 50, 51]
-      //Input_0_String: "1.0"
+  public void test_setMsg_7()  throws Throwable  {
+      //caseID:664dfaf41be35178608610a2f2b89229
+      //CoveredLines: [13, 23, 24, 25, 50, 51]
+      //Input_0_String: "1"
       
-      //mock codeMsg0
-      CodeMsg codeMsg0 = mock(CodeMsg.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      Result<String> result0 = Result.error(codeMsg0);
+      Object object0 = new Object();
+      Result<Object> result0 = Result.success(object0);
       
       //Call method: setMsg
-      result0.setMsg("1.0");
+      result0.setMsg("1");
       
       //Test Result Assert
       assertEquals(0, result0.getCode());

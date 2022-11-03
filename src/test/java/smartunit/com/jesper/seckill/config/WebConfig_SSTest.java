@@ -11,7 +11,7 @@ import static org.smartunit.shaded.org.mockito.Mockito.*;
 import org.smartunit.shaded.org.mockito.ArgumentMatchers;
 import com.jesper.seckill.config.UserArgumentResolver;
 import com.jesper.seckill.config.WebConfig;
-import groovy.lang.NonEmptySequence;
+import groovy.lang.Sequence;
 import org.junit.runner.RunWith;
 import org.smartunit.runtime.ExecutorServiceAnswer;
 import org.smartunit.runtime.PrivateAccess;
@@ -26,20 +26,20 @@ public class WebConfig_SSTest extends WebConfig_SSTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test_addArgumentResolvers_0()  throws Throwable  {
-      //caseID:9d1d5be98baeb11fabf5aa00e24d039e
+      //caseID:5ad725909e415e819f5b5920141eed2c
       //CoveredLines: [16, 27, 28]
-      //Input_0_HandlerMethodArgumentResolver>: nonEmptySequence0
+      //Input_0_HandlerMethodArgumentResolver>: sequence0
       
       WebConfig webConfig0 = new WebConfig();
       //mock userArgumentResolver0
       UserArgumentResolver userArgumentResolver0 = mock(UserArgumentResolver.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       PrivateAccess.setVariable((Class<?>) WebConfig.class, webConfig0, "userArgumentResolver", (Object) userArgumentResolver0);
-      NonEmptySequence nonEmptySequence0 = new NonEmptySequence();
+      Sequence sequence0 = new Sequence();
       
       //Call method: addArgumentResolvers
-      webConfig0.addArgumentResolvers(nonEmptySequence0);
+      webConfig0.addArgumentResolvers(sequence0);
       
       //Test Result Assert
-      assertEquals(1, nonEmptySequence0.size());
+      assertFalse(sequence0.isEmpty());
   }
 }

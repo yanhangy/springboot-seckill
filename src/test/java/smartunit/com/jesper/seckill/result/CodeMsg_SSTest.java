@@ -18,93 +18,93 @@ public class CodeMsg_SSTest extends CodeMsg_SSTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test_fillArgs_0()  throws Throwable  {
-      //caseID:0c155beef58d34dbc0d46b7e12566175
+      //caseID:0180af1866050906377bec4bbc2c39f9
       //CoveredLines: [34, 35, 36, 37, 61, 62, 63]
       //Input_0_Object[]: objectArray0
-      //Assert: assertEquals(500400, method_result.getCode());
+      //Assert: assertEquals(500210, method_result.getCode());
       
-      CodeMsg codeMsg0 = CodeMsg.ORDER_NOT_EXIST;
+      CodeMsg codeMsg0 = CodeMsg.SESSION_ERROR;
       Object[] objectArray0 = new Object[0];
       
       //Call method: fillArgs
       CodeMsg codeMsg1 = codeMsg0.fillArgs(objectArray0);
       
       //Test Result Assert
-      assertEquals(500400, codeMsg1.getCode());
+      assertEquals(500210, codeMsg1.getCode());
   }
 
   @Test(timeout = 4000)
   public void test_getCode_1()  throws Throwable  {
-      //caseID:d5ea3154cd0be6bb0bf3d9fabf1f9b26
+      //caseID:46d9723fac02a8c00977e2100a48eace
       //CoveredLines: [40]
-      //Assert: assertEquals(500101, method_result);
+      //Assert: assertEquals(500213, method_result);
       
-      CodeMsg codeMsg0 = CodeMsg.BIND_ERROR;
+      CodeMsg codeMsg0 = CodeMsg.MOBILE_ERROR;
       
       //Call method: getCode
       int int0 = codeMsg0.getCode();
       
       //Test Result Assert
-      assertEquals(500101, int0);
+      assertEquals(500213, int0);
   }
 
   @Test(timeout = 4000)
   public void test_getMsg_2()  throws Throwable  {
-      //caseID:6f952ee5a57aea31552e56fe070cc05b
+      //caseID:2c7f75229e086dd9a9b2bff502901cdb
       //CoveredLines: [48]
-      //Assert: assertEquals("\u624B\u673A\u53F7\u4E0D\u5B58\u5728", method_result);
+      //Assert: assertEquals("\u4E0D\u80FD\u91CD\u590D\u79D2\u6740", method_result);
       
-      CodeMsg codeMsg0 = CodeMsg.MOBILE_NOT_EXIST;
+      CodeMsg codeMsg0 = CodeMsg.REPEATE_SECKILL;
       
       //Call method: getMsg
       String string0 = codeMsg0.getMsg();
       
       //Test Result Assert
-      assertEquals("\u624B\u673A\u53F7\u4E0D\u5B58\u5728", string0);
+      assertEquals("\u4E0D\u80FD\u91CD\u590D\u79D2\u6740", string0);
   }
 
   @Test(timeout = 4000)
   public void test_setCode_3()  throws Throwable  {
-      //caseID:8b7c394cd70b340083bcc16e362378b5
+      //caseID:d713c4055c276eb008551847d213180a
       //CoveredLines: [44, 45]
-      //Input_0_int: 955
+      //Input_0_int: 
       
-      CodeMsg codeMsg0 = CodeMsg.SUCCESS;
+      CodeMsg codeMsg0 = CodeMsg.PASSWORD_ERROR;
       
       //Call method: setCode
-      codeMsg0.setCode(955);
+      codeMsg0.setCode((-1));
       
       //Test Result Assert
-      assertEquals(955, codeMsg0.getCode());
+      assertEquals((-1), codeMsg0.getCode());
   }
 
   @Test(timeout = 4000)
   public void test_setMsg_4()  throws Throwable  {
-      //caseID:8e55efec0d1fc63e08d360e4ffc6e620
+      //caseID:f979adec1e55cf5a6b35b0ec46586d9f
       //CoveredLines: [52, 53]
-      //Input_0_String: "500213"
+      //Input_0_String: "1"
       
-      CodeMsg codeMsg0 = CodeMsg.BIND_ERROR;
+      CodeMsg codeMsg0 = CodeMsg.SERVER_ERROR;
       
       //Call method: setMsg
-      codeMsg0.setMsg("500213");
+      codeMsg0.setMsg("1");
       
       //Test Result Assert
-      assertEquals(500101, codeMsg0.getCode());
+      assertEquals("1", codeMsg0.getMsg());
   }
 
   @Test(timeout = 4000)
   public void test_toString_5()  throws Throwable  {
-      //caseID:78f932dcce1ef50b4c75b8440fbad666
+      //caseID:e7c177ef513d398a7701037076f78cf0
       //CoveredLines: [68]
-      //Assert: assertEquals("CodeMsg [code=500100, msg=\u670D\u52A1\u7AEF\u5F02\u5E38]", method_result);
+      //Assert: assertEquals("CodeMsg [code=0, msg=success]", method_result);
       
-      CodeMsg codeMsg0 = CodeMsg.SERVER_ERROR;
+      CodeMsg codeMsg0 = CodeMsg.SUCCESS;
       
       //Call method: toString
       String string0 = codeMsg0.toString();
       
       //Test Result Assert
-      assertEquals("CodeMsg [code=500100, msg=\u670D\u52A1\u7AEF\u5F02\u5E38]", string0);
+      assertEquals("CodeMsg [code=0, msg=success]", string0);
   }
 }
