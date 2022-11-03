@@ -52,15 +52,15 @@ public class CodeMsg_SSTest extends CodeMsg_SSTest_scaffolding {
   public void test_getMsg_2()  throws Throwable  {
       //caseID:3738123059c6322bec11e82d67d76dbb
       //CoveredLines: [48]
-      //Assert: assertEquals("\u4E0D\u80FD\u91CD\u590D\u79D2\u6740", method_result);
+      //Assert: assertEquals("\u624B\u673A\u53F7\u4E0D\u5B58\u5728", method_result);
       
-      CodeMsg codeMsg0 = CodeMsg.REPEATE_SECKILL;
+      CodeMsg codeMsg0 = CodeMsg.MOBILE_NOT_EXIST;
       
       //Call method: getMsg
       String string0 = codeMsg0.getMsg();
       
       //Test Result Assert
-      assertEquals("\u4E0D\u80FD\u91CD\u590D\u79D2\u6740", string0);
+      assertEquals("\u624B\u673A\u53F7\u4E0D\u5B58\u5728", string0);
   }
 
   @Test(timeout = 4000)

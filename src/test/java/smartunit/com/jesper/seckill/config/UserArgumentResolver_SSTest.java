@@ -180,7 +180,7 @@ public class UserArgumentResolver_SSTest extends UserArgumentResolver_SSTest_sca
       ModelAndViewContainer modelAndViewContainer0 = mock(ModelAndViewContainer.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       //mock httpServletResponse0
       HttpServletResponse httpServletResponse0 = mock(HttpServletResponse.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      Cookie[] cookieArray0 = new Cookie[2];
+      Cookie[] cookieArray0 = new Cookie[4];
       //mock cookie0
       Cookie cookie0 = mock(Cookie.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       doReturn("token").when(cookie0).getName();
@@ -228,7 +228,7 @@ public class UserArgumentResolver_SSTest extends UserArgumentResolver_SSTest_sca
       ModelAndViewContainer modelAndViewContainer0 = mock(ModelAndViewContainer.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       //mock httpServletResponse0
       HttpServletResponse httpServletResponse0 = mock(HttpServletResponse.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      Cookie[] cookieArray0 = new Cookie[2];
+      Cookie[] cookieArray0 = new Cookie[4];
       //mock cookie0
       Cookie cookie0 = mock(Cookie.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
       doReturn("token").when(cookie0).getName();
