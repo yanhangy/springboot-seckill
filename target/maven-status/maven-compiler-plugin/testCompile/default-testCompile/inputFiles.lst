@@ -59,9 +59,9 @@
 /home/smartunit/codeWorkspace/src/test/java/smartunit/com/jesper/seckill/controller/SeckillController_SSTest.java
 /home/smartunit/codeWorkspace/src/test/java/smartunit/com/jesper/seckill/limit/RateLimiterDemo_SSTest_scaffolding.java
 /home/smartunit/codeWorkspace/src/test/java/smartunit/com/jesper/seckill/rabbitmq/MQReceiver_SSTest_scaffolding.java
+/home/smartunit/codeWorkspace/src/test/java/smartunit/com/jesper/seckill/MainApplication_SSTest.java
 /home/smartunit/codeWorkspace/src/test/java/smartunit/com/jesper/seckill/controller/DemoController_SSTest_scaffolding.java
 /home/smartunit/codeWorkspace/src/test/java/smartunit/com/jesper/seckill/service/UserService_SSTest_scaffolding.java
-/home/smartunit/codeWorkspace/src/test/java/smartunit/com/jesper/seckill/MainApplication_SSTest.java
 /home/smartunit/codeWorkspace/src/test/java/smartunit/com/jesper/seckill/bean/SeckillGoods_SSTest_scaffolding.java
 /home/smartunit/codeWorkspace/src/test/java/smartunit/com/jesper/seckill/redis/SeckillKey_SSTest_scaffolding.java
 /home/smartunit/codeWorkspace/src/test/java/smartunit/com/jesper/seckill/config/WebConfig_SSTest_scaffolding.java
