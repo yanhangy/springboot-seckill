@@ -29,22 +29,6 @@ public class RedisService_SSTest extends RedisService_SSTest_scaffolding {
 // allCoveredLines:[15, 24, 26, 28, 29, 30, 31, 33, 34, 42, 44, 45, 46, 47, 49, 50, 51, 52, 54, 57, 59, 68, 70, 72, 73, 74, 76, 84, 86, 88, 89, 91, 100, 102, 104, 105, 107, 115, 117, 119, 120, 122, 128, 129, 131, 132, 133, 134, 135, 136, 137, 139, 145, 146, 148, 149, 150, 151, 152, 153, 155, 160, 161, 163]
 
   @Test(timeout = 4000)
-  public void test_beanToString_00()  throws Throwable  {
-      //caseID:1872b461360b34450219d878ded48c5f
-      //CoveredLines: [15, 128, 131, 132, 134, 136, 139]
-      //Input_0_Object: redisService0
-      //Assert: assertEquals("{}", method_result);
-      
-      RedisService redisService0 = new RedisService();
-      
-      //Call method: beanToString
-      String string0 = RedisService.beanToString((Object) redisService0);
-      
-      //Test Result Assert
-      assertEquals("{}", string0);
-  }
-
-  @Test(timeout = 4000)
   public void test_decr_01()  throws Throwable  {
       //caseID:c8ad5e9bcbf235ae2f414d304f762d40
       //CoveredLines: [15, 115, 117, 119, 120, 122, 160, 161, 163]
